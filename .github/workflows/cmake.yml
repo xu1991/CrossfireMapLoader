@@ -22,7 +22,6 @@ jobs:
       shell: pwsh 
 
     - name: Display github.workspace by pwsh
-      # Build your program with the given configuration
       run: 
           echo "github.workspace is ${{ github.workspace }}."
           1s ${{ github.workspace } }
