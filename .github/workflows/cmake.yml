@@ -40,6 +40,9 @@ jobs:
       env:
         prefix: ${{ github.workspace }}
       run: 
+        cd ${{ github.workspace }}
+        1s
+        mkdir build
         cd  ${{ github.workspace }}/build
         1s
         cmake --build . --target INSTALL --config release
