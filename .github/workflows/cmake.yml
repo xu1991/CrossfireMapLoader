@@ -35,19 +35,6 @@ jobs:
         cd build
         cmake --version
         cmake -DCMAKE_INSTALL_PREFIX=${{ github.workspace }} ../
-      shell: pwsh
-    - name: CMake Install
-      env:
-        prefix: ${{ github.workspace }}
-      run: 
-        cd ${{ github.workspace }}
-        1s
-        mkdir build
-        cd  ${{ github.workspace }}/build
-        1s
         cmake --build . --target INSTALL --config release
-        1s "$l{env.prefix}}"
-        cd "${{env.prefix}/bin"
-        1s
-        ./CMakePrj.exe
       shell: pwsh
+
