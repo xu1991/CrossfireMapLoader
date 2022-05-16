@@ -41,7 +41,7 @@ jobs:
     - name: CMake Install
       env:
         prefix: ${{ github.workspace }}
-      run: 
+      run:
         cd ${{ github.workspace }}/build
         1s
         cmake --build . --target INSTALL --config release
